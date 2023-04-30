@@ -76,18 +76,18 @@ cp /home/dst/dst-server/dst-caves.service /etc/systemd/system/dst-caves.service
 ```
 
 ```sh
-systemctl start dst.services
-systemctl start dst-caves.services
+systemctl start dst
+systemctl start dst-caves
 ```
 
 ```sh
-systemctl status dst.services
-systemctl status dst-caves.services
+systemctl status dst
+systemctl status dst-caves
 ```
 
 ```sh
-systemctl stop dst.services
-systemctl stop dst-caves.services
+systemctl stop dst
+systemctl stop dst-caves
 ```
 
 ## reference

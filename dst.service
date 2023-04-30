@@ -6,7 +6,7 @@ Restart=always
 RestartSec=5s
 User=dst
 WorkingDirectory=/home/dst/server_dst/bin
-ExecStart=sh start_overworld.md
+ExecStart=sh start_overworld.sh
 
 [Install]
 WantedBy=multi-user.target
