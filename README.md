@@ -68,7 +68,27 @@ cp master-server.ini /home/dst/.klei/DoNotStarveTogether/MyDediServer/Master/ser
 cp caves-server.ini /home/dst/.klei/DoNotStarveTogether/MyDediServer/Caves/server.ini
 ```
 
+### services
+```sh
+exit 使用者從 dst 回到 root
+cp dst.service /etc/systemd/system/dst.service
+cp dst-caves.service /etc/systemd/system/dst-caves.service
+```
 
+```sh
+systemctl start dst.services
+systemctl start dst-caves.services
+```
+
+```sh
+systemctl status dst.services
+systemctl status dst-caves.services
+```
+
+```sh
+systemctl stop dst.services
+systemctl stop dst-caves.services
+```
 
 ## reference
 * [linode promote](https://www.youtube.com/watch?v=e-Ymi3W_qc4)
