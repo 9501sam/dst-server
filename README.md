@@ -53,7 +53,6 @@ cluster name "turtlegod test 123" > add new server > 取得 token
 
 ```sh
 vim /home/dst/.klei/DoNotStarveTogether/MyDediServer/cluster_token.txt # 貼上 token
-vim /home/dst/.klei/DoNotStarveTogether/MyDediServer/Master/worldgenoverride.lua  # 貼上 token
 ```
 
 ```sh
@@ -88,6 +87,10 @@ systemctl status dst-caves
 ```sh
 systemctl stop dst
 systemctl stop dst-caves
+```
+
+```sh
+systemctl deamon-reload
 ```
 
 ## reference
