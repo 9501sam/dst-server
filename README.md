@@ -71,8 +71,8 @@ cp caves-server.ini /home/dst/.klei/DoNotStarveTogether/MyDediServer/Caves/serve
 ### services
 ```sh
 exit 使用者從 dst 回到 root
-cp dst.service /etc/systemd/system/dst.service
-cp dst-caves.service /etc/systemd/system/dst-caves.service
+cp /home/dst/dst-server/dst.service /etc/systemd/system/dst.service
+cp /home/dst/dst-server/dst-caves.service /etc/systemd/system/dst-caves.service
 ```
 
 ```sh
