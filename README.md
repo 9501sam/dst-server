@@ -62,6 +62,8 @@ cd /home/dst/dst-server
 
 cp master-worldgenoverride.lua /home/dst/.klei/DoNotStarveTogether/MyDediServer/Master/worldgenoverride.lua
 cp caves-worldgenoverride.lua /home/dst/.klei/DoNotStarveTogether/MyDediServer/Caves/worldgenoverride.lua
+cp modoverrides.lua /home/dst/.klei/DoNotStarveTogether/MyDediServer/Master/modoverrides.lua
+cp modoverrides.lua /home/dst/.klei/DoNotStarveTogether/MyDediServer/Caves/modoverrides.lua
 cp cluster.ini /home/dst/.klei/DoNotStarveTogether/MyDediServer/cluster.ini
 cp master-server.ini /home/dst/.klei/DoNotStarveTogether/MyDediServer/Master/server.ini
 cp caves-server.ini /home/dst/.klei/DoNotStarveTogether/MyDediServer/Caves/server.ini
@@ -69,7 +71,7 @@ cp caves-server.ini /home/dst/.klei/DoNotStarveTogether/MyDediServer/Caves/serve
 
 ### services
 ```sh
-exit 使用者從 dst 回到 root
+exit # 使用者從 dst 回到 root
 cp /home/dst/dst-server/dst.service /etc/systemd/system/dst.service
 cp /home/dst/dst-server/dst-caves.service /etc/systemd/system/dst-caves.service
 ```
