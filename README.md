@@ -82,6 +82,11 @@ systemctl start dst-caves
 ```
 
 ```sh
+systemctl restart dst
+systemctl restart dst-caves
+```
+
+```sh
 systemctl status dst
 systemctl status dst-caves
 ```
