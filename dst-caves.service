@@ -4,8 +4,8 @@ Description=dst caves
 [Service]
 Restart=always
 RestartSec=5s
-User=dst
-WorkingDirectory=/home/dst/server_dst/bin
+User=dst2
+WorkingDirectory=/home/dst2/server_dst/bin
 ExecStart=sh start_caves.sh
 
 [Install]

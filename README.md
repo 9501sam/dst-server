@@ -11,8 +11,8 @@ sudo apt-get install libcurl4-gnutls-dev:i386
 ```
 
 ```sh
-adduser dst # 之後全部選項都按 enter
-su - dst
+adduser dst2 # 之後全部選項都按 enter
+su - dst2
 ```
 
 ```sh
@@ -25,13 +25,13 @@ mkdir server_dst
 ./steamcmd.sh
 ```
 ```sh
-Steam> force_install_dir /home/dst/server_dst
+Steam> force_install_dir /home/dst2/server_dst
 Steam> login anonymous
 Steam> app_update 343050 validate
 Steam> quit
 ```
 ```sh
-cd /home/dst/server_dst/bin
+cd /home/dst2/server_dst/bin
 echo " ./dontstarve_dedicated_server_nullrenderer -console -cluster MyDediServer -shard Master" > start_overworld.sh
 echo "./dontstarve_dedicated_server_nullrenderer -console -cluster MyDediServer -shard Caves" > start_caves.sh
 ```
@@ -52,52 +52,52 @@ launch dst > account > 右上角"三"的圖示 > games > game servers(dst) >
 cluster name "turtlegod test 123" > add new server > 取得 token
 
 ```sh
-vim /home/dst/.klei/DoNotStarveTogether/MyDediServer/cluster_token.txt # 貼上 token
+echo <token> /home/dst2/.klei/DoNotStarveTogether/MyDediServer/cluster_token.txt
 ```
 
 ```sh
-cd /home/dst/
+cd /home/dst2/
 git clone https://github.com/9501sam/dst-server
-cd /home/dst/dst-server
+cd /home/dst2/dst-server
 
-cp master-worldgenoverride.lua /home/dst/.klei/DoNotStarveTogether/MyDediServer/Master/worldgenoverride.lua
-cp caves-worldgenoverride.lua /home/dst/.klei/DoNotStarveTogether/MyDediServer/Caves/worldgenoverride.lua
-cp modoverrides.lua /home/dst/.klei/DoNotStarveTogether/MyDediServer/Master/modoverrides.lua
-cp modoverrides.lua /home/dst/.klei/DoNotStarveTogether/MyDediServer/Caves/modoverrides.lua
-cp cluster.ini /home/dst/.klei/DoNotStarveTogether/MyDediServer/cluster.ini
-cp master-server.ini /home/dst/.klei/DoNotStarveTogether/MyDediServer/Master/server.ini
-cp caves-server.ini /home/dst/.klei/DoNotStarveTogether/MyDediServer/Caves/server.ini
+cp master-worldgenoverride.lua /home/dst2/.klei/DoNotStarveTogether/MyDediServer/Master/worldgenoverride.lua
+cp caves-worldgenoverride.lua /home/dst2/.klei/DoNotStarveTogether/MyDediServer/Caves/worldgenoverride.lua
+cp modoverrides.lua /home/dst2/.klei/DoNotStarveTogether/MyDediServer/Master/modoverrides.lua
+cp modoverrides.lua /home/dst2/.klei/DoNotStarveTogether/MyDediServer/Caves/modoverrides.lua
+cp cluster.ini /home/dst2/.klei/DoNotStarveTogether/MyDediServer/cluster.ini
+cp master-server.ini /home/dst2/.klei/DoNotStarveTogether/MyDediServer/Master/server.ini
+cp caves-server.ini /home/dst2/.klei/DoNotStarveTogether/MyDediServer/Caves/server.ini
 ```
 
 ### services
 ```sh
 exit # 使用者從 dst 回到 root
-cp /home/dst/dst-server/dst.service /etc/systemd/system/dst.service
-cp /home/dst/dst-server/dst-caves.service /etc/systemd/system/dst-caves.service
+cp /home/dst2/dst-server/dst.service /etc/systemd/system/dst2.service
+cp /home/dst2/dst-server/dst-caves.service /etc/systemd/system/dst2-caves.service
 ```
 
 ```sh
-systemctl start dst
-systemctl start dst-caves
+systemctl start dst2
+systemctl start dst2-caves
 ```
 
 ```sh
-systemctl restart dst
-systemctl restart dst-caves
+systemctl restart dst2
+systemctl restart dst2-caves
 ```
 
 ```sh
-systemctl status dst
-systemctl status dst-caves
+systemctl status dst2
+systemctl status dst2-caves
 ```
 
 ```sh
-systemctl stop dst
-systemctl stop dst-caves
+systemctl stop dst2
+systemctl stop dst2-caves
 ```
 
 ```sh
-systemctl deamon-reload
+systemctl daemon-reload
 ```
 
 ## reference
