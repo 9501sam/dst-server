@@ -52,7 +52,7 @@ launch dst > account > 右上角"三"的圖示 > games > game servers(dst) >
 cluster name "turtlegod test 123" > add new server > 取得 token
 
 ```sh
-echo <token> /home/dst2/.klei/DoNotStarveTogether/MyDediServer/cluster_token.txt
+echo <token> > /home/dst2/.klei/DoNotStarveTogether/MyDediServer/cluster_token.txt
 ```
 
 ```sh
