@@ -97,9 +97,28 @@ systemctl stop dst-caves
 ```
 
 ```sh
-systemctl deamon-reload
+systemctl daemon-reload
+```
+
+### update steamCMD
+```sh
+./steamcmd.sh +force_install_dir /home/dst/server_dst +login anonymous +app_update 343050 validate +quit
+```
+#### setting up auto update server every day at 6:00
+```sh
+cp update.sh /home/dst/server_dst/bin/update.sh
+chmod +x /home/dst/server_dst/bin/update.sh
+```
+
+```sh
+crontab -e
+```
+then paste
+```sh
+0 22 * * * sh /home/dst/server_dst/bin/update.sh
 ```
 
 ## reference
 * [linode promote](https://www.youtube.com/watch?v=e-Ymi3W_qc4)
 * [How to setup dedicated server with cave on Linux](https://steamcommunity.com/sharedfiles/filedetails/?id=590565473)
+* [Execute a shell script everyday at specific time](https://stackoverflow.com/questions/34753831/execute-a-shell-script-everyday-at-specific-time)
