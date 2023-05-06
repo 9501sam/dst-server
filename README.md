@@ -58,6 +58,9 @@ vim /home/dst/.klei/DoNotStarveTogether/MyDediServer/cluster_token.txt # 貼上 
 ```sh
 cd /home/dst/
 git clone https://github.com/9501sam/dst-server
+```
+
+```sh
 cd /home/dst/dst-server
 
 cp master-worldgenoverride.lua /home/dst/.klei/DoNotStarveTogether/MyDediServer/Master/worldgenoverride.lua
