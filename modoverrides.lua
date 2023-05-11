@@ -27,6 +27,7 @@ return {
             SHOWPLAYERICONS=true,
             SHOWPLAYERSOPTIONS=2
 
+
         },
         enabled=true
 
@@ -40,9 +41,32 @@ return {
             ENABLEHOTKEY=false,
             KEYBOARDTOGGLEKEY="P"
 
+
         },
         enabled=true
 
-    }
-
+    },
+    ["workshop-1418746242"]={
+        ["configuration_options"]={ ["clearfont"]=true, ["eventplus"]=true, ["extratrans"]=true   },
+        ["enabled"]=true 
+    },
+    ["workshop-2885354999"]={
+        ["configuration_options"]={
+            ["HUDSCALEFACTOR"]=100,
+            ["SEASONOPTIONS"]="Clock",
+            ["SHOWCLOCKTEXT"]=true,
+            ["SHOWMAXONNUMBERS"]=true,
+            ["SHOWMOON"]=1,
+            ["SHOWNAUGHTINESS"]=true,
+            ["SHOWNEXTFULLMOON"]=false,
+            ["SHOWSTATNUMBERS"]=true,
+            ["SHOWTEMPBADGES"]=true,
+            ["SHOWTEMPERATURE"]=true,
+            ["SHOWWORLDTEMP"]=false,
+            ["UNIT"]="T",
+            ["styling"]=0 
+        },
+        ["enabled"]=true 
+    } 
 }
+
