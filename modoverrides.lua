@@ -12,10 +12,8 @@ return {
             ["MemSpikeFixworkshop-609429306"]="default",
             ["MemSpikeFixworkshop-758532836"]="default",
             craftinghighlight=false
-
         },
         enabled=true
-
     },
     ["workshop-378160973"]={
         configuration_options={
@@ -29,7 +27,6 @@ return {
 
         },
         enabled=true
-
     },
     ["workshop-758532836"]={
         configuration_options={
@@ -42,7 +39,29 @@ return {
 
         },
         enabled=true
+    },
+    ["workshop-1418746242"]={
+        ["configuration_options"]={ ["clearfont"]=true, ["eventplus"]=true, ["extratrans"]=true  },
+        ["enabled"]=true 
 
-    }
+    },
+    ["workshop-2885354999"]={
+        ["configuration_options"]={
+            ["HUDSCALEFACTOR"]=100,
+            ["SEASONOPTIONS"]="Clock",
+            ["SHOWCLOCKTEXT"]=true,
+            ["SHOWMAXONNUMBERS"]=true,
+            ["SHOWMOON"]=1,
+            ["SHOWNAUGHTINESS"]=true,
+            ["SHOWNEXTFULLMOON"]=false,
+            ["SHOWSTATNUMBERS"]=true,
+            ["SHOWTEMPBADGES"]=true,
+            ["SHOWTEMPERATURE"]=true,
+            ["SHOWWORLDTEMP"]=false,
+            ["UNIT"]="T",
+            ["styling"]=0 
 
+        },
+        ["enabled"]=true 
+    } 
 }
