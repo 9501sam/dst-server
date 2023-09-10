@@ -1,8 +1,9 @@
+### 安裝必要套件
 ```sh
 sudo dpkg --add-architecture i386
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install lib32gcc1-s1    # If running a 64bit OS
+sudo apt-get install lib32gcc-s1    # If running a 64bit OS
 ```
 
 ```sh
@@ -10,10 +11,13 @@ sudo apt-get install lib32stdc++6 # If running a 64bit OS
 sudo apt-get install libcurl4-gnutls-dev:i386
 ```
 
+### 建立`dst`使用者
 ```sh
 adduser dst # 之後全部選項都按 enter
 su - dst
 ```
+
+### 下載steamcmd
 
 ```sh
 wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
@@ -24,21 +28,144 @@ mkdir server_dst
 ```sh
 ./steamcmd.sh
 ```
+
+### 使用`steamcmd`下載`dst_server`
+
 ```sh
 Steam> force_install_dir /home/dst/server_dst
 Steam> login anonymous
 Steam> app_update 343050 validate
 Steam> quit
 ```
+
+### 使用`dontstarve_dedicated_server_nullrenderer`執行檔案打開`MyDediServer`資料夾的世界
+
 ```sh
 cd /home/dst/server_dst/bin
 echo " ./dontstarve_dedicated_server_nullrenderer -console -cluster MyDediServer -shard Master" > start_overworld.sh
 echo "./dontstarve_dedicated_server_nullrenderer -console -cluster MyDediServer -shard Caves" > start_caves.sh
 ```
 
+### 先跑一次
+
 ```sh
 sh start_overworld.sh
 ```
+
+### 在本機建立世界以後，移動到`/home/dst/.klei/DoNotStarveTogether/MyDediServer`
+
+`cluster_token.txt`要放在`MyDediServer`底下  
+
+
+```bash
+MyDediServer/
+├── cluster.ini
+├── cluster_token.txt
+└── Master
+    ├── backup
+    │   ├── server_chat_log
+    │   │   ├── server_chat_log_2023-09-10-18-23-18.txt
+    │   │   ├── server_chat_log_2023-09-10-18-26-32.txt
+    │   │   └── server_chat_log_2023-09-10-18-33-07.txt
+    │   └── server_log
+    │       ├── server_log_2023-09-10-18-23-17.txt
+    │       ├── server_log_2023-09-10-18-26-32.txt
+    │       └── server_log_2023-09-10-18-33-07.txt
+    ├── leveldataoverride.lua
+    ├── modoverrides.lua
+    ├── save
+    │   ├── boot_modindex
+    │   ├── cached_userid
+    │   ├── client_temp
+    │   ├── event_match_stats
+    │   ├── mod_config_data
+    │   ├── modindex
+    │   ├── profile
+    │   ├── server_temp
+    │   │   └── server_save
+    │   ├── session
+    │   │   ├── 13D01453AA1BE69A
+    │   │   │   ├── 0000000002
+    │   │   │   ├── 0000000002.meta
+    │   │   │   ├── 0000000003
+    │   │   │   ├── 0000000003.meta
+    │   │   │   └── A7HC9N7485LM
+    │   │   │       ├── 0000000004
+    │   │   │       └── 0000000004.meta
+    │   │   └── 1CA601BDE6633852
+    │   │       ├── 0000000166
+    │   │       ├── 0000000166.meta
+    │   │       ├── 0000000167
+    │   │       ├── 0000000167.meta
+    │   │       ├── 0000000168
+    │   │       ├── 0000000168.meta
+    │   │       ├── 0000000169
+    │   │       ├── 0000000169.meta
+    │   │       ├── 0000000170
+    │   │       ├── 0000000170.meta
+    │   │       ├── 0000000171
+    │   │       ├── 0000000171.meta
+    │   │       ├── A7HC9N7485LM
+    │   │       │   ├── 0000000166
+    │   │       │   ├── 0000000166.meta
+    │   │       │   ├── 0000000167
+    │   │       │   ├── 0000000167.meta
+    │   │       │   ├── 0000000168
+    │   │       │   ├── 0000000168.meta
+    │   │       │   ├── 0000000169
+    │   │       │   ├── 0000000169.meta
+    │   │       │   ├── 0000000170
+    │   │       │   ├── 0000000170.meta
+    │   │       │   ├── 0000000171
+    │   │       │   └── 0000000171.meta
+    │   │       ├── A7IMAN8AGANJ
+    │   │       │   ├── 0000000166
+    │   │       │   ├── 0000000166.meta
+    │   │       │   ├── 0000000167
+    │   │       │   ├── 0000000167.meta
+    │   │       │   ├── 0000000168
+    │   │       │   ├── 0000000168.meta
+    │   │       │   ├── 0000000169
+    │   │       │   ├── 0000000169.meta
+    │   │       │   ├── 0000000170
+    │   │       │   ├── 0000000170.meta
+    │   │       │   ├── 0000000171
+    │   │       │   └── 0000000171.meta
+    │   │       ├── A7JMCD0JH1LG
+    │   │       │   ├── 0000000166
+    │   │       │   ├── 0000000166.meta
+    │   │       │   ├── 0000000167
+    │   │       │   ├── 0000000167.meta
+    │   │       │   ├── 0000000168
+    │   │       │   ├── 0000000168.meta
+    │   │       │   ├── 0000000169
+    │   │       │   ├── 0000000169.meta
+    │   │       │   ├── 0000000170
+    │   │       │   ├── 0000000170.meta
+    │   │       │   ├── 0000000171
+    │   │       │   └── 0000000171.meta
+    │   │       └── A7LK9AEP35CF
+    │   │           ├── 0000000164
+    │   │           └── 0000000164.meta
+    │   ├── shardindex
+    │   ├── shardindex_time
+    │   └── world_presets
+    ├── server_chat_log.txt
+    ├── server.ini
+    └── server_log.txt
+```
+
+
+### 進入`/home/dst/server_dst/bin`跑shell
+
+```sh
+sh start_overworld.sh
+```
+
+
+---
+
+
 when you see in end of log: "Your Server Will Not Start"
 press CTRL+C for stop server
 
